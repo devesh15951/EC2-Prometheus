@@ -80,18 +80,20 @@ scrape_configs:
     scrape_interval: 10s
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
-
     static_configs:
     - targets: ['localhost:9090']
   
-  - job_name: 'node'
+  - job_name: 'node1'
     scrape_interval: 5s
     static_configs:
-    - targets: ['172.31.62.49:9100']
+    - targets: ['<NodeExporterInstanceIP>:9100']
+  - job_name: 'node2'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['<NodeExporterInstanceIP>:9100']
 ````
 
 * Run prometheus docker container
 ```
 docker run -d -p 9090:9090 -v ~/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ````
-
