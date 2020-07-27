@@ -1,4 +1,4 @@
-# EC2-Prometheus-Graphana
+# EC2-Prometheus-Grafana
 
 ### Spin up EC2 instances which need to be monitored
 
