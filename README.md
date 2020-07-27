@@ -1,4 +1,4 @@
-# EC2-Prometheus-Grafana
+# EC2-Prometheus
 
 ### Spin up EC2 instances which need to be monitored
 
@@ -51,7 +51,7 @@ docker pull prom/prometheus
 ```
 vi ~/prometheus.yml
 ````
-* Add IPs of ec2 instances that need to be monitored
+* Replace NodeExporterInstanceIP with IPs that need to be monitored
 ```
 # my global config
 global:
